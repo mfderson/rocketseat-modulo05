@@ -67,3 +67,29 @@ export const SubmitButton = styled.button.attrs(props => ({
       }
     `}
 `;
+
+export const List = styled.ul`
+  list-style: none; /* Remove as bolinhas da lista */
+  margin-top: 30px;
+
+  li {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Alinhamento vertical */
+
+    /* Coloca a borda cinza entre os li's */
+    /* & - pega todos os li's */
+    /* + li - e pega todos li's que sejam seguidos por um li anterior */
+    /* Ou seja, aplica estilização em todos os itens, menos no primeiro */
+    & + li {
+      border-top: 1px solid #eee;
+    }
+
+    a {
+      color: #7159c1;
+      text-decoration: none; /* Tira o underline */
+    }
+  }
+`;
