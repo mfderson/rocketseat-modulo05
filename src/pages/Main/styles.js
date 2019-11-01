@@ -7,10 +7,12 @@ export const Form = styled.form`
 
   input {
     flex: 1; /* Ocupe toda a largura */
-    border: 1px solid #eee; /* borda de 1px */
+    border: 1px solid ${props => (props.error ? '#ff6b6b' : '#eee')};
     padding: 10px 15px; /* 10px top e bottom e 15px right left */
     border-radius: 4px; /* arredondamento das bordas */
     font-size: 16px;
+
+    transition: border 0.25s ease-out;
   }
 `;
 
